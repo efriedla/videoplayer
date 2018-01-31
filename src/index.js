@@ -1,18 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import SearchBar from './components/search_bar';
 import API_KEY from './config';
-// import App from './App';
-// import registerServiceWorker from './registerServiceWorker';
-// var mykey = config.MY_KEY;
+import YTSearch from 'youtube-api-search';
 
-const App = () => {
-    return (
-        <div>
-            <SearchBar />
-        </div>
-    )
+
+YTSearch({key: myAPI_Key, term: 'surboards'}, function(data){
+    console.log(data);
+});
+class App extends Component  {
+   render(){
+        return (
+            <div>
+                <SearchBar />
+            </div>
+        )
+   }
     
 }
 
