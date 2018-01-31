@@ -1,3 +1,14 @@
+In this I would like to use the YouTube API, search a video, see a list of videos to select and play that selected video.
+## Check List
+[x] get api working
+[x] divide up componenets of the page
+[x] set the state to the api 
+[x] pass the state to componenets
+[x] play video
+[] select new video to play
+[] start new search
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
