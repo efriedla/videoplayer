@@ -6,10 +6,18 @@ import API_KEY from './config';
 import YTSearch from 'youtube-api-search';
 
 
-YTSearch({key: myAPI_Key, term: 'surboards'}, function(data){
-    console.log(data);
-});
+
 class App extends Component  {
+    constructor(props){
+        super(props)
+
+        this.state = { videos: [] };
+
+        YTSearch({key: myAPI_Key, term: 'surboards'}, (videos) => {
+            this.setState({videos});
+            //this.setState({videos: videos});
+        });
+    }
    render(){
         return (
             <div>
