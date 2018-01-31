@@ -9,7 +9,7 @@ class SearchBar extends Component {
     render(){
         return (
        
-           <div>
+           <div className="jumbotron">
                 <input onChange={event => this.setState({ term: event.target.value})} />
                 <p>Value : {this.state.term}</p>
            </div>
