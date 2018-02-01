@@ -12,10 +12,16 @@ class App extends Component  {
     constructor(props){
         super(props)
 
-        this.state = { videos: [] };
+        this.state = { 
+            videos: [],
+            selectedVideo: null
+        };
 
-        YTSearch({key: myAPI_Key, term: 'surboards'}, (videos) => {
-            this.setState({videos});
+        YTSearch({key: myAPI_Key, term: 'shark'}, (videos) => {
+            this.setState({
+                videos: videos,
+                selectedVideo: videos[0]
+            });
             //this.setState({videos: videos});
         });
     }
@@ -24,7 +30,7 @@ class App extends Component  {
             <div>
                 <SearchBar />
                 <div className=" row">
-                    <VideoDetails video={this.state.videos[0]}/>
+                    <VideoDetails video={this.state.selectedVideo}/>
                     <VideoList videos={this.state.videos}/>
                 </div>
                
