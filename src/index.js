@@ -9,7 +9,6 @@ import YTSearch from 'youtube-api-search';
 
 
 
-
 class App extends Component  {
     constructor(props){
         super(props)
@@ -19,10 +18,10 @@ class App extends Component  {
             selectedVideo: null
             
         };
-        this.videoSearch('serfoards')    
+        this.videoSearch('serfoards');    
     }
-
-    videaSearch(term){
+    
+    videoSearch(term){
         YTSearch({key: myAPI_Key, term: term}, (videos) => {
             this.setState({
                 videos: videos,
@@ -33,7 +32,7 @@ class App extends Component  {
    render(){
         return (
             <div>
-                <SearchBar />
+                <SearchBar onSearchTermChange={term => this.videoSearch(term)} />
                 <div className=" row">
                     <VideoDetails video={this.state.selectedVideo}/>
                     <VideoList 
