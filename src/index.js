@@ -9,6 +9,7 @@ import YTSearch from 'youtube-api-search';
 
 
 
+
 class App extends Component  {
     constructor(props){
         super(props)
@@ -16,10 +17,13 @@ class App extends Component  {
         this.state = { 
             videos: [],
             selectedVideo: null
-        
+            
         };
+        this.videoSearch('serfoards')    
+    }
 
-        YTSearch({key: myAPI_Key, term: 'shark'}, (videos) => {
+    videaSearch(term){
+        YTSearch({key: myAPI_Key, term: term}, (videos) => {
             this.setState({
                 videos: videos,
                 selectedVideo: videos[0]
