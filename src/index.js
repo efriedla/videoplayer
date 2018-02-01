@@ -8,6 +8,7 @@ import API_KEY from './config';
 import YTSearch from 'youtube-api-search';
 
 
+
 class App extends Component  {
     constructor(props){
         super(props)
@@ -23,7 +24,6 @@ class App extends Component  {
                 videos: videos,
                 selectedVideo: videos[0]
             });
-            //this.setState({videos: videos});
         });
     }
    render(){
