@@ -5,8 +5,8 @@ In this I would like to use the YouTube API, search a video, see a list of video
 - [x] set the state to the api 
 - [x] pass the state to componenets
 - [x] play video
-- [] select new video to play
-- [] start new search
+- [x] select new video to play
+- [ ] start new search
 
 
 
